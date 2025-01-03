@@ -4,33 +4,33 @@ public class Main {
 
         ShiftPoint shiftPoint = new ShiftPoint(10000000, 5);
 
-        System.out.println(shiftPoint.shiftIndex());
+        System.out.println(shiftPoint.shiftIndex());// 10000000
 
         shiftPoint.setK(4);
-        System.out.println(shiftPoint.shiftIndex());
+        System.out.println(shiftPoint.shiftIndex()); //4
 
 
         shiftPoint.setK(0);
-        System.out.println(shiftPoint.shiftIndex());
+        System.out.println(shiftPoint.shiftIndex()); //0
 
         shiftPoint.setK(100);
-        System.out.println(shiftPoint.shiftIndex());
+        System.out.println(shiftPoint.shiftIndex()); //100
 
         //if s is 0 there is no shift
         shiftPoint.setS(0);
-        System.out.println(shiftPoint.shiftIndex());
+        System.out.println(shiftPoint.shiftIndex()); //0
 
 
         shiftPoint.setS(-5);
-        System.out.println(shiftPoint.shiftIndex());
+        System.out.println(shiftPoint.shiftIndex()); //100
 
         shiftPoint.setS(0);
         shiftPoint.setK(0);
-        System.out.println(shiftPoint.shiftIndex());
+        System.out.println(shiftPoint.shiftIndex());  //0
 
         ShiftPointWithDifferentMethod shiftPointWithDifferentMethod = new ShiftPointWithDifferentMethod(4,5);
 
-        System.out.println(shiftPointWithDifferentMethod.shiftIndex());
+        System.out.println(shiftPointWithDifferentMethod.shiftIndex()); //4
 
 
     }
