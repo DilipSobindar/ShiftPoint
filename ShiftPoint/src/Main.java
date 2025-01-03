@@ -111,7 +111,7 @@ class ShiftPoint {
                 long actualDiff = getValue(end) - getValue(st - 1);
                 if (expectedDiff == actualDiff) {
                     st = end;
-                    end = end << 2;
+                    end = end << 1;
                 } else {
                     //found in this range
                     long leftExpectedDiff = diff * (mid - st + 1);
