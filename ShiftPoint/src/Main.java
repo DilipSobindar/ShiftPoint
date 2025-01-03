@@ -103,8 +103,18 @@ class ShiftPoint {
         while (st <= end && end <= MAX) {
             try {
                 long mid = st + (end - st) / 2;
-                if (getValue(mid + 1) - getValue(mid) != getValue(mid) - getValue(mid - 1))
-                    return mid + 1;
+                diff1 = getValue(mid - 1) - getValue(mid - 2);
+                diff2 = getValue(mid) - getValue(mid - 1);
+                diff3 = getValue(mid + 1) - getValue(mid);
+
+                if (diff1 == diff2) {
+                    if (diff2 != diff3) {
+                        return mid + 1;
+                    }
+
+                } else if (diff2 == diff3) {
+                    return mid - 1;
+                }
 
                 long numbers = end - st + 1;
                 long expectedDiff = numbers * diff;
