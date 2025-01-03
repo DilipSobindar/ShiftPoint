@@ -56,6 +56,7 @@ class ShiftPoint {
 
     long k = 4;
     long S = 5;
+    long MAX = 1_000_000_000_000L; //length of array(if any, by default 10^12)
 
     public void setK(int k) {
         this.k = k;
@@ -96,10 +97,10 @@ class ShiftPoint {
         } else if (diff2 == diff3) {
             return 1;
         }
-        long MAX = 1_000_000_000_000L;
+        
         diff = diff1;
         long st = 2, end = 4;
-        while (st <= end && end < MAX) {
+        while (st <= end && end <= MAX) {
             try {
                 long mid = st + (end - st) / 2;
                 if (getValue(mid + 1) - getValue(mid) != getValue(mid) - getValue(mid - 1))
