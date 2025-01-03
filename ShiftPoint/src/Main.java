@@ -25,8 +25,29 @@ public class Main {
         assert shiftPoint.shiftIndex()==0;
 
 
+        // adding different monotonic function
+
+        ShiftPointWithDifferentMethod shiftPointWithDifferentMethod = new ShiftPointWithDifferentMethod(4,5);
+        
+        assert  shiftPointWithDifferentMethod.shiftIndex() ==4;
+        
+
     }
 
+}
+
+
+class ShiftPointWithDifferentMethod extends ShiftPoint {
+
+    public ShiftPointWithDifferentMethod(int k, int S) {
+        super(k, S);
+    }
+
+    public long f(long i) {
+        return 2 * i +5;
+    }
+    
+    
 }
 
 class ShiftPoint {
@@ -51,7 +72,7 @@ class ShiftPoint {
     public ShiftPoint() {
     }
 
-    private long f(long i) {
+    public long f(long i) {
         return 2 * i;
     }
 
@@ -62,7 +83,7 @@ class ShiftPoint {
     public long shiftIndex() {
         long diff;
         long diff1 = 0, diff2 = 0, diff3 = 0;
-        diff1 = getValue(1) - getValue(0); 
+        diff1 = getValue(1) - getValue(0);
         diff2 = getValue(2) - getValue(1);
         diff3 = getValue(3) - getValue(2);
 
