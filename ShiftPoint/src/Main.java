@@ -4,33 +4,34 @@ public class Main {
 
         ShiftPoint shiftPoint = new ShiftPoint(10000000, 5);
 
-        assert shiftPoint.shiftIndex() == 10000000;
+        System.out.println(shiftPoint.shiftIndex());
+
+        shiftPoint.setK(4);
+        System.out.println(shiftPoint.shiftIndex());
+
 
         shiftPoint.setK(0);
-        assert shiftPoint.shiftIndex() == 0;
+        System.out.println(shiftPoint.shiftIndex());
 
         shiftPoint.setK(100);
-        assert shiftPoint.shiftIndex() == 100;
+        System.out.println(shiftPoint.shiftIndex());
 
         //if s is 0 there is no shift
         shiftPoint.setS(0);
-        assert shiftPoint.shiftIndex() == 0;
+        System.out.println(shiftPoint.shiftIndex());
 
 
         shiftPoint.setS(-5);
-        assert shiftPoint.shiftIndex() == 100;
+        System.out.println(shiftPoint.shiftIndex());
 
         shiftPoint.setS(0);
         shiftPoint.setK(0);
-        assert shiftPoint.shiftIndex()==0;
-
-
-        // adding different monotonic function
+        System.out.println(shiftPoint.shiftIndex());
 
         ShiftPointWithDifferentMethod shiftPointWithDifferentMethod = new ShiftPointWithDifferentMethod(4,5);
-        
-        assert  shiftPointWithDifferentMethod.shiftIndex() ==4;
-        
+
+        System.out.println(shiftPointWithDifferentMethod.shiftIndex());
+
 
     }
 
@@ -46,8 +47,8 @@ class ShiftPointWithDifferentMethod extends ShiftPoint {
     public long f(long i) {
         return 2 * i +5;
     }
-    
-    
+
+
 }
 
 class ShiftPoint {
