@@ -62,9 +62,9 @@ class ShiftPoint {
     public long shiftIndex() {
         long diff;
         long diff1 = 0, diff2 = 0, diff3 = 0;
-        diff1 = getValue(1) - getValue(0); //2
-        diff2 = getValue(2) - getValue(1);// 7
-        diff3 = getValue(3) - getValue(2);//
+        diff1 = getValue(1) - getValue(0); 
+        diff2 = getValue(2) - getValue(1);
+        diff3 = getValue(3) - getValue(2);
 
         if (diff1 == diff2) {
             if (diff2 != diff3) {
@@ -107,29 +107,3 @@ class ShiftPoint {
     }
 }
 
-
-/*
-
-0   1   2   3   4    5    6    7    8    9
-
-f(x)
-
-1
-8
-27
-
-
-
-g(i) = f(i)  i<k
-
-g(i) = f(i)+ S i>=k
-
-
-
-
-
-
-0 1 2 4 8 16 32 ...
-
-
- */
